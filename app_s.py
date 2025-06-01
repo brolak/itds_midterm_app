@@ -34,11 +34,12 @@ df_countries = df[df['iso_code'].notna()]
 iso_to_country = df.drop_duplicates(subset=['iso_code']).set_index('iso_code')['country'].to_dict()
 iso_to_country_clean = {k: v for k, v in iso_to_country.items() if pd.notna(k)}
 country_options = list(iso_to_country_clean.keys())
-COUNTRY = st.sidebar.selectbox("Select a country for distribution plots", country_options, index=country_options.index('USA') if 'USA' in country_options else 0)
-country_name = iso_to_country_clean[COUNTRY]
+# COUNTRY = st.sidebar.selectbox("Select a country for distribution plots", country_options, index=country_options.index('USA') if 'USA' in country_options else 0)
+# country_name = iso_to_country_clean[COUNTRY]
+COUNTRY = "USA"  # Default country for the example
 
 # 1. Distribution plots for each feature (for selected country)
-st.header(f"Feature Distributions for {country_name}")
+st.header(f"Feature Distributions for {COUNTRY}")
 import matplotlib.pyplot as plt
 
 for column in ['population', 'gdp', 'co2', 'methane', 'nitrous_oxide', 'total_ghg']:
