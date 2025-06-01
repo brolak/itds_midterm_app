@@ -54,7 +54,7 @@ filtered_top20 = filtered_top20.sort_values('total_co2_per_capita', ascending=Fa
 
 app_ui = ui.page_fluid(
     ui.h2("Global CO2 Emissions Dashboard"),
-    ui.h4("Worldwide Average Feature Trends"),
+    ui.h4("Worldwide Average Trends"),
     ui.hr(),
     ui.output_plot("world_trends"),
     ui.hr(),
