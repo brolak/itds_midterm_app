@@ -2,3 +2,5 @@ matplotlib==3.7.5
 pandas==2.0.3
 seaborn==0.13.2
 shiny==1.1.0
+jupyter==1.0.0
+jupyterlab==4.0.6 
