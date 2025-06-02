@@ -4,13 +4,6 @@ import seaborn as sns
 from shiny import App, ui, render, reactive
 
 try:
-    data_dict_df = pd.read_excel("visualizing_global_CO2_emissions_data_dictionary.xlsx")
-except:
-    path = "https://docs.google.com/spreadsheets/d/1f84EF1Rn-j2oofFZmpId77BWIcDnEiM7/view?usp=drive_link"
-    path ='https://drive.google.com/uc?id=' + path.split('/')[-2]
-    data_dict_df = pd.read_excel(path)
-
-try:
     df = pd.read_csv("visualizing_global_co2_data.csv")
 except:
     path = "https://drive.google.com/file/d/16w_qjmvXFkPcR7tt4W1UKQC7ZIwgK8sR/view?usp=sharing"
